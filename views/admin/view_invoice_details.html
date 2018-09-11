@@ -1,0 +1,77 @@
+<%- include('../layouts/header.html') %>
+	<% if(result.length > 0){ %>
+<div class="right-side">
+	<div class="row">
+		<div class="col-xs-12">	
+			<div class="top_heading">
+				<h3>Invoice Details</h3> 
+			</div>
+		</div>
+	</div>
+	<div class="row">
+	<div class="col-sm-12">
+	<div class="details">
+            <% for(res in result){ %>
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="basic_details min_h">
+					<div class="row">
+						<div class="col-sm-3">
+							<p>Invoice no</p>
+						</div>
+						<div class="col-sm-3">
+							<p><%= result[res].invoice_id %></p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-3">
+							<p>Status</p>
+						</div>
+						<div class="col-sm-3">
+							<p>Issued</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-3">
+							<p>Invoice Name</p>
+						</div>
+						<div class="col-sm-3">
+							<p>Abc</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-3">
+							<p>Date</p>
+						</div>
+						<div class="col-sm-3">
+							<p>05-10-2018</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-3">
+							<p>Customer</p>
+						</div>
+						<div class="col-sm-3">
+							<p><%= result[res].user_fname %> <% result[res].user_lname %></p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-3">
+							<p>Amount</p>
+						</div>
+						<div class="col-sm-3">
+							<p><%= result[res].amount %></p>
+						</div>
+					</div>
+				</div>
+			</div>
+        </div>
+        <% } %>
+	</div>
+</div>
+</div>
+</div>
+
+<% } %>
+</body>
+</html>

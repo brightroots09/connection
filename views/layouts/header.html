@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Admin</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400,700" rel="stylesheet">
+    <script src="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/tadatable.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <!-- <script src="/dist/crs.min.js"></script> -->
+    <script>
+        $(document).ready(function () {
+            $('#logout').click(function () {
+                $('.logout').fadeToggle();
+            });
+            $('#menu').click(function () {
+                $('.col-sm-2.sidebar').fadeToggle();
+            });
+            $('#example').DataTable();
+        });
+    </script>
+</head>
+
+<body>
+    <header class="right_content">
+    <div class="col-sm-2 bg">
+        <figure class="logo">
+            <a href="#">
+                <img src="/images/logo_1.png" alt="Logo" title="Logo">
+            </a>
+        </figure>
+    </div>
+    <div class="col-sm-10 head">
+        <div class="spacing">
+            <div class="col-md-5 col-sm-6 col-xs-12 pull-right" style="padding-right:0;">
+                <div class="row">
+                    <div class="right_text">
+                        <div class="col-md-8 col-sm-9 col-xs-9 padding  pull-right">
+                            <% if(user){ %>
+                            <a href="javascript:void(0);" id="logout">
+                                    <div class="col-sm-4 col-xs-4 phone_padding" style="padding-left:0;">
+                                        <img src="/images/no_user.png" alt="Admin" title="Admin" class="img-circle">
+                                    </div>
+                                <div class="col-sm-6 col-xs-6">
+                                    <div class="name">
+                                            <h2><%= user.name %></h2>
+                                        <span>Admin</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2 col-xs-2" style="padding-right:0;">
+                                    <h5 class="dropdown">
+                                        <img src="/images/bottom.png" alt="" title="">
+                                    </h5>
+                                </div>
+                                <div class="logout" style="display:none;">
+                                    <a href="/logout">Logout</a>
+                                </div>
+                                
+                            </a>
+                            <% } else { %>
+                                <a class="btn btn-primary custom" style="margin-top: 3%" href="/login">Login</a>
+                            <% } %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="menu_bar">
+    <a href="javascript:void(0);" id="menu">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </a>
+</div>
+<a href="javascript:void(0);" clas="menu_bar"></a>
+<div class="col-sm-2 sidebar">
+    <div class="list_content">
+        <ul>
+            <li>
+                <a href="/">Dashboard</a>
+            </li>
+            <li>
+                <a href="/users">Users</a>
+            </li>
+            <!-- <li>
+                <a href="/customers">Customers</a>
+            </li>
+            <li>
+                <a href="/technicians">Technicians</a>
+            </li> -->
+            <li>
+                <a href="/jobs">All Jobs</a>
+            </li>
+            <li>
+                <a href="/quotes">Quote</a>
+            </li>
+            <li>
+                <a href="/invoices">Invoice</a>
+            </li>
+            <li>
+                <a href="/payments">Payment History</a>
+            </li>
+            <li>
+                <a href="/chat_forum">Forum</a>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Socket.IO chat</title>
+        <script src="/socket.io/socket.io.js"></script> 
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script> 
+        
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { font: 13px Helvetica, Arial; }
+      form { background: #000; padding: 3px; position: fixed; bottom: 0; width: 100%; }
+      form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
+      form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
+      #messages { list-style-type: none; margin: 0; padding: 0; }
+      #messages li { padding: 5px 10px; }
+      #messages li:nth-child(odd) { background: #eee; }
+    </style>
+  </head>
+  <body>
+    <ul id="messages"></ul>
+    <form name="chatform" id="chatform" action="Javascript:void(0);" method="post">
+      <input id="m" autocomplete="off" />
+      <input id="imagefile" type="file" name="image" autocomplete="off" />
+      <input type="submit" name="submit" id="chatbtn" />
+    </form>
+      <script>
+      var socket = io();
+      socket.on('connect', function(){
+        // call the server-side function 'adduser' and send one parameter (value of prompt)
+       // socket.emit('adduser', prompt("What's your name?"));
+        });
+        
+        
+        
+        $('#imagefile').on('change', function(e)
+        {
+	    
+	    var file = e.originalEvent.target.files[0],
+	        reader = new FileReader();
+	    reader.onload = function(evt){
+	        
+	    /*    
+	        var name = data.username;
+      var userid = data.userid;
+      var friendid = data.friendid;
+      var message = data.message;
+      var date = data.datetime;
+      var duration = data.duration;
+      var msg = '';
+      var filter_password = data.filter_password;
+	     */   
+	        
+	        socket.emit('image message', {"message":evt.target.result,"username":"chandar","userid":"47","friendid":"67","datetime":"2017-09-29 18:39:53 +0530","duration":"10","filter_password":"new"});
+	    };
+	   
+	    reader.readAsDataURL(file);  
+	});
+        
+        
+        
+            
+           $("#chatbtn").click(function(){
+                 socket.emit('new message', {"message":$('#m').val(),"username":"chandar","userid":"47","friendid":"67","datetime":"2017-09-29 18:39:53 +0530","filter_password":"new"});
+                $('#m').val('');
+                return false;
+            });
+           $('#chatform').submit(function()
+                {
+                socket.emit('new message', {"message":$('#m').val(),"username":"chandar","userid":"47","friendid":"67","datetime":"2017-09-29 18:39:53 +0530","filter_password":"new"});
+                $('#m').val('');
+                return false;
+                });
+            socket.on('new message', function(data)
+            {
+                $('#messages').append($('<li>').text(data.message));
+            });
+        </script>
+  </body>
+</html>

@@ -1,0 +1,148 @@
+<%- include('../layouts/header.html') %>
+<div class="right-side">
+	<div class="row">
+		<div class="col-xs-12">	
+			<div class="top_heading">
+				<h3>Payment History</h3> 
+			</div>
+		</div>
+		<div class="col-sm-12">
+			<div class="responsive">
+				<table class="table table-striped table-bordered" id="example" style="width:100%">
+					<thead>
+					  <tr>
+						<th>Customer Name</th>
+						<th>Contractor Name</th>
+						<th>Service</th>						                  	                                                  	          	
+						<th>Price</th>					                  	                                                  	          	
+						<th>Status</th>					                  	                                                  	          	
+						<th>Action</th>					                  	                                                  	          	
+					  </tr>	
+						</thead>
+						<tbody>
+					  <tr>
+						<td>Johan Deo</td>		                    			       	    
+						<td>Johan</td>
+						<td>Plumbing</td>
+						<td>$10</td>
+						<td><span style="padding: 5px;" class="label label-success">Completed</span></td>
+						<td>
+							<a href="/payment/id"><img src="/images/view.png" title="View" alt=""></a>				
+							<!--<a href="javascript:void(0);"><img src="/images/delete.png" title="Delete" alt=""></a>-->
+						</td>
+					  </tr>	
+					  <tr>
+						<td>Johan Deo</td>		                    			       	    
+						<td>Johan</td>
+						<td>Plumbing</td>
+						<td>$10</td>
+						<td><span style="padding: 5px;" class="label label-info">In Progress</span></td>
+						<td>
+							<a href=""><img src="/images/view.png" title="View" alt=""></a>				
+							<!--<a href="javascript:void(0);"><img src="/images/delete.png" title="Delete" alt=""></a>-->
+						</td>
+					  </tr>
+					  <tr>
+						<td>Johan Deo</td>		                    			       	    
+						<td>Johan</td>
+						<td>Plumbing</td>
+						<td>$10</td>
+						<td><span style="padding: 5px;" class="label label-info">In Progress</span></td>
+						<td>
+							<a href=""><img src="/images/view.png" title="View" alt=""></a>				
+							<!--<a href="javascript:void(0);"><img src="/images/delete.png" title="Delete" alt=""></a>-->
+						</td>
+					  </tr>
+					</tbody>
+				  </table>
+			</div>
+		</div>
+	</div>
+	<div class="model_popup">
+		<div id="myModal" class="modal fade" role="dialog">
+		  <div class="modal-dialog">
+			<div class="modal-content">
+			  <div class="modal-body">
+				<div class="row">
+					<div class="col-sm-12 text-center">
+						<h2>Edit job</h2>
+					</div>
+					<form>
+					<div class="input_content">
+						<div class="col-sm-6">
+							<label>User Name</label>
+							<input type="text" class="form-control" value="Johan Deo">
+						</div>
+						<div class="col-sm-6">
+							<label>Contractor Name</label>
+							<input type="text" class="form-control" value="Johan">
+						</div>
+						<div class="col-sm-6">
+							<label>Technician Name</label>
+							<input type="text" class="form-control" value="Will Yeoh">
+						</div>
+						<div class="col-sm-6">
+							<label>Services</label>
+							<input type="text" class="form-control" value="Plumber">
+						</div>
+						<div class="col-sm-6">
+							<label>Location</label>
+							<input type="text" class="form-control" value="Phase 8b Mohali">
+						</div>
+						<div class="col-sm-6">
+							<label>Price</label>
+							<input type="text" class="form-control" value="$25">
+						</div>
+						<div class="col-sm-12">
+							<label>Urgency</label>
+							<input type="text" class="form-control" value="Standard">
+						</div>
+						<div class="col-xs-6">
+							<input  type="button" value="Cancel" class="btn btn-primary" data-dismiss="modal">
+						</div>
+						<div class="col-xs-6 text-right">
+							<input  type="button" value="Save" class="btn btn-primary" style="background:#3ba997;">
+						</div>
+					</div>
+					</form>
+				</div>
+			  </div>
+			</div>
+
+		  </div>
+		</div>
+	</div>
+	<div class="model_popup">
+		<div id="new" class="modal fade" role="dialog">
+		  <div class="modal-dialog">
+			<div class="modal-content">
+			  <div class="modal-body">
+				<div class="row">
+					<div class="col-sm-12 text-center">
+						<h2>Send Notes</h2>
+					</div>
+					<form>
+					<div class="input_content">
+						<div class="col-sm-12">
+							<label>Message</label>
+							<textarea></textarea>
+						</div>
+						<div class="col-xs-6">
+							<input  type="button" value="Cancel" class="btn btn-primary" data-dismiss="modal">
+						</div>
+						<div class="col-xs-6 text-right">
+							<input  type="button" value="Save" class="btn btn-primary" style="background:#3ba997;">
+						</div>
+					</div>
+					</form>
+				</div>
+			  </div>
+			</div>
+
+		  </div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

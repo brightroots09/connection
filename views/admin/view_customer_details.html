@@ -1,0 +1,187 @@
+<%- include('../layouts/header.html') %>
+<% if(result.length > 0){  %>
+
+    <div class="right-side">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="top_heading">
+                    <h3>Customers Details</h3>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <% for(user in result){ %>
+                <div class="details">
+                    <div class="row">
+                        <div class="col-sm-7">
+                            <div class="basic_details">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <p>Name</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p><%= result[user].Fname %> <%= result[user].Lname %></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <p>Email</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p><%= result[user].Email %></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <p>Phone Number</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p><%= result[user].ContactNo %></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <p>Total jobs</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p>10</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <p>Total Payment</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p>$ 500</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-5">
+                            <div class="licence_image">
+                                <img src="/images/<%= result[user].ProfilePic %>" alt="Customers" title="Customers">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="basic_details top_space_content" style="min-height:auto;">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="row">
+                                            <div class="col-sm-3">
+                                                <div class="round_image">
+                                                    <img src="/images/<%= result[user].ProfilePic %>" alt="User" title="User">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <div class="round_content">
+                                                    <h3>Job completed by johan</h3>
+                                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                                    <ul>
+                                                        <li>
+                                                            <a href="javascript:void(0);">
+                                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0);">
+                                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0);">
+                                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0);">
+                                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0);">
+                                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <span class="text">Total Paid:
+                                            <span>$15</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="row">
+                                            <div class="col-sm-3">
+                                                <div class="round_image">
+                                                    <img src="/images/<%= result[user].ProfilePic %>" alt="User" title="User">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <div class="round_content">
+                                                    <h3>Job completed by johan</h3>
+                                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                                    <ul>
+                                                        <li>
+                                                            <a href="javascript:void(0);">
+                                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0);">
+                                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0);">
+                                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0);">
+                                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0);">
+                                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <span class="text">Total Paid:
+                                            <span>$15</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <% } %>
+            </div>
+        </div>
+    </div>
+
+    <% } else{ %>
+        <h1>
+            No Custome Found
+        </h1>
+    <% } %>
+    </body>
+
+    </html>

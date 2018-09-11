@@ -1,0 +1,267 @@
+<%- include('../layouts/header.html') %>
+    <div class="right-side">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="top_heading">
+                    <h3>Contractors Details</h3>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="details">
+                    <% if(result.length > 0){ for(user in result){ %>
+                        <div class="row">
+                            <div class="col-sm-7">
+                                <div class="basic_details">
+                                    <h2>Basic Details</h2>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <p>Company Name </p>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <p>
+                                                <%= result[user].CompanyName %>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <p>Address</p>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <p>
+                                                <%= result[user].Address %>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <p>Number of technicians</p>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <p>
+                                                <%= result[user].NoOfTechnicians %>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <p>licenses no</p>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <p>
+                                                <%= result[user].LicenseNo %>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <p>Email</p>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <p>
+                                                <%= result[user].Email %>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <p>Status</p>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <p>Active</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-5">
+                                <div class="licence_image">
+                                    <img src="/images/<%= result[user].LicenceImage %>" alt="Licence" title="Licence">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-7">
+                                <div class="basic_details top_space_content">
+                                    <h2>estimation details</h2>
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            <p>Price per hour</p>
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <p>
+                                                <%= result[user].PricePerHour %>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            <p>Diagnostic rates</p>
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <p>
+                                                <%= result[user].DiagnosticCharges %>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            <p>Travel Charges</p>
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <p>
+                                                <%= result[user].TravelCharges %>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            <p>Truck Charges</p>
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <p>
+                                                <%= result[user].TruckCharges %>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-5">
+                                <div class="basic_details top_space_content overflow">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <div class="round_image">
+                                                <img src="/images/<%= result[user].ProfilePic %>" alt="User" title="User">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <div class="round_content">
+                                                <h3>Job completed by johan</h3>
+                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                                <ul>
+                                                    <li>
+                                                        <a href="javascript:void(0);">
+                                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);">
+                                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);">
+                                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);">
+                                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);">
+                                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <div class="round_image">
+                                                <img src="/images/<%= result[user].ProfilePic %>" alt="User" title="User">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <div class="round_content">
+                                                <h3>Job completed by johan</h3>
+                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                                <ul>
+                                                    <li>
+                                                        <a href="javascript:void(0);">
+                                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);">
+                                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);">
+                                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);">
+                                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);">
+                                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <div class="round_image">
+                                                <img src="/images/<%= result[user].ProfilePic %>" alt="User" title="User">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <div class="round_content">
+                                                <h3>Job completed by johan</h3>
+                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                                <ul>
+                                                    <li>
+                                                        <a href="javascript:void(0);">
+                                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);">
+                                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);">
+                                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);">
+                                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);">
+                                                            <i class="fa fa-star" aria-hidden="true"></i>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 text-right">
+                                            <a href="/" class="btn btn-primary custom">View More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <% } }%>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+
+    </html>

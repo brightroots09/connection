@@ -1,0 +1,59 @@
+
+    <%- include('./layouts/header.html') %>
+
+    <div class="container-fluid">
+        <div class="right-side">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="total_user">
+                        <div class="row">
+                            <div class="col-xs-8">
+                                <h2>Total Customers</h2>
+                                    <p><%= result.customers %></p>
+                            </div>
+                            <div class="col-xs-4 text-right">
+                                <img src="/images/customer.png" title="" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="total_user">
+                        <div class="row">
+                            <div class="col-xs-8">
+                                <h2>Total Contractors</h2>
+                                    <p><%= result.contractors %></p>
+                            </div>
+                            <div class="col-xs-4 text-right">
+                                <img src="/images/contractor.png" title="" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="total_user">
+                        <div class="row">
+                            <div class="col-xs-8">
+                                <h2>Total Technicians</h2>
+                                    <p><%= result.technicians %></p>
+                            </div>
+                            <div class="col-xs-4 text-right">
+                                <img src="/images/technician.png" title="" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="dashboard_image">
+                        <img src="/images/dashboard.png" title="" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+</html>

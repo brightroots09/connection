@@ -1,0 +1,112 @@
+<%- include('../layouts/header.html') %>
+    <% if(quotes.length > 0){ %>
+
+<div class="right-side">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="top_heading">
+                <h3>Quote Details</h3>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="details">
+                <div class="row">
+                    <% for(quote in quotes){ %>
+                    <div class="col-sm-12">
+                        <div class="basic_details min_h">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <p>Company Name</p>
+                                </div>
+                                <div class="col-sm-3">
+                                    <p><%= quotes[quote].company_name %></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <p>Customers Name</p>
+                                </div>
+                                <div class="col-sm-3">
+                                    <p><%= quotes[quote].accepted_user_Fname %> <%= quotes[quote].accepted_user_Lname %></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <p>Contractors Name</p>
+                                </div>
+                                <div class="col-sm-3">
+                                    <p><%= quotes[quote].contractor_Fname %> <%= quotes[quote].contractor_Lname %></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <p>Job Name</p>
+                                </div>
+                                <div class="col-sm-3">
+                                    <p><%= quotes[quote].service_name %></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <p>Location</p>
+                                </div>
+                                <div class="col-sm-3">
+                                    <p><%= quotes[quote].service_address %></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <p>Price per hour</p>
+                                </div>
+                                <div class="col-sm-3">
+                                    <p><%= quotes[quote].PricePerHour %></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <p>Travel Charges</p>
+                                </div>
+                                <div class="col-sm-3">
+                                    <p><%= quotes[quote].TravelCharges %></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <p>Truck Charges</p>
+                                </div>
+                                <div class="col-sm-3">
+                                    <p><%= quotes[quote].TruckCharges %></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <p>ETA</p>
+                                </div>
+                                <div class="col-sm-3">
+                                    <p><%= quotes[quote].ETA %></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <p>Status</p>
+                                </div>
+                                <div class="col-sm-3">
+                                    <p>In Progress</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <% } %>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<% } %>
+</body>
+
+</html>
